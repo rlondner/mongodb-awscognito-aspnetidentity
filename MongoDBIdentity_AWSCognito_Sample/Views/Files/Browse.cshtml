@@ -1,0 +1,19 @@
+﻿@model IEnumerable<IdentitySample.Models.S3File>
+@{
+    ViewBag.Title = "Plan Downloads";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Subscription Plan Downloads</h2>
+
+<table class="table">
+
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+        </tr>
+    }
+</table>
